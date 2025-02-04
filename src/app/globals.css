@@ -1,21 +1,102 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'HakgyoansimBunpilR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimBunpilR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  font-family: 'HakgyoansimBunpilR';
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search_box {
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-size: 22px;
+  background-position: 6px;
+  background-repeat: no-repeat;
+  
+  padding: 5px 5px;
+  text-indent: 24px;
+  height: 30px;
+  width: 240px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  border: none;
+  color: #3f3f3f;
+  background-color: #F3F3F3;
+  padding: 8px;
+  gap: 8px;
+}
+
+.search_box:focus {
+  background-image: none;
+  background-position: -10px center;
+  text-indent: 0;
+}
+
+.search_box:not(:placeholder-shown) {
+  background-image: none;
+  text-indent: 0;
+}
+
+nav .logo {
+  width: 8rem;
+}
+
+.a_wrap {
+  justify-content: left;
+}
+
+.a_wrap a {
+  font-size: 1.2rem;
+  margin-left: 1.8rem;
+}
+
+.search_box .search_icon {
+  width: 24px;
+}
+
+.search_box .search_text {
+  font-size: 1rem;
+}
+
+.login_button {
+  font-size: 1rem;
+  width: 72px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.login_button:hover {
+  cursor:pointer;
 }
